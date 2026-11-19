@@ -1,33 +1,17 @@
 # Tugas Praktikum 4 – Dasar Pemrograman Python
 
-Repositori ini berisi pengerjaan Tugas Praktikum 4 Mata Kuliah **Pengembangan Aplikasi Web / Pemrograman Python**. Seluruh program dirancang dengan kode Python yang bersih, mudah dipahami, terstruktur menggunakan fungsi dan docstring, serta memenuhi kaidah PEP 8.
 
----
-
-## 1. Identitas Mahasiswa
+## 1. Identitas 
 
 - **Nama** : Andre Prasetya Daely
 - **NIM** : 123140131
 - **Program Studi** : Teknik Informatika
 - **Mata Kuliah** : Praktikum Pengembangan Aplikasi Web (Pertemuan 4)
 
----
-
-## 2. Struktur Proyek
-
-```text
-andreprasetyadaely_123140131_pertemuan4/
-├── .gitignore
-├── README.md
-├── tugas1_bmi.py
-├── tugas2_nilai_mahasiswa.py
-├── math_operations.py
-└── main.py
-```
 
 ---
 
-## 3. Deskripsi & Alur Kerja Program
+## 2. Deskripsi & Alur Kerja Program
 
 ### A. Soal 1 – Penghitung BMI (`tugas1_bmi.py`)
 
@@ -85,32 +69,7 @@ andreprasetyadaely_123140131_pertemuan4/
 
 ---
 
-## 4. Cara Menjalankan Program melalui Terminal
-
-Buka terminal pada VS Code (atau PowerShell / Command Prompt), pastikan direktori aktif berada pada folder project ini:
-
-```bash
-cd andreprasetyadaely_123140131_pertemuan4
-```
-
-### Menjalankan Soal 1 (Penghitung BMI)
-```bash
-python tugas1_bmi.py
-```
-
-### Menjalankan Soal 2 (Pengelolaan Nilai Mahasiswa)
-```bash
-python tugas2_nilai_mahasiswa.py
-```
-
-### Menjalankan Soal 3 (Pengujian Modul Matematika)
-```bash
-python main.py
-```
-
----
-
-## 5. Dokumentasi Screenshot Hasil Eksekusi
+## 3. Dokumentasi Screenshot Hasil Eksekusi
 
 ### Screenshot Soal 1 – Penghitung BMI (`tugas1_bmi.py`)
 <img width="631" height="127" alt="Screenshot 2026-11-19 181614" src="https://github.com/user-attachments/assets/b01b88c9-c346-4d15-ac63-42fe93029e2e" />
