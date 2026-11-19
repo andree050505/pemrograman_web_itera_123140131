@@ -129,8 +129,7 @@ Berikut adalah dokumentasi tampilan dan pengujian aplikasi Mini POS:
 ### 1. Tampilan Utama Dashboard Kasir
 *Tampilan antarmuka utama saat aplikasi pertama kali dimuat dengan keranjang belanja kosong.*
 
-![Tampilan Utama Aplikasi](screenshot-utama.png)
-*(Ganti tautan di atas dengan file screenshot utama Anda)*
+![Tampilan Utama Aplikasi](<img width="308" height="438" alt="Screenshot 2026-11-19 154901" src="https://github.com/user-attachments/assets/fe5aa329-160c-4345-ac8e-41f87afad744" />)
 
 ### 2. Tampilan Validasi Error Formulir
 *Tampilan ketika input nama, harga, atau qty tidak memenuhi kriteria validasi (muncul pesan teks merah).*
