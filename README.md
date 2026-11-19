@@ -1,6 +1,6 @@
-# Pemrograman Web - Institut Teknologi Sumatera (ITERA)
+# Pengembangan Aplikasi Web - Institut Teknologi Sumatera (ITERA)
 
-Tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
+Tugas praktikum mata kuliah **Pengembangan Aplikasi Web** 
 
 ## Identitas 
 - **Nama** : Andre Prasetya Daely
