@@ -114,32 +114,7 @@ andre_123140131_pertemuan3/
 - Pastikan telah terinstal [Node.js](https://nodejs.org/) (versi 18 atau yang lebih baru).
 - Pastikan npm sudah terpasang.
 
-### B. Langkah Instalasi
 
-1. Buka terminal pada direktori proyek:
-   ```bash
-   cd "d:/iphone/Everything/TUGAS SEM 7/paw_praktikum_3"
-   ```
-
-2. Instal dependensi proyek:
-   ```bash
-   npm install
-   ```
-
-### C. Menjalankan Server Pengembangan (Development)
-
-Jalankan perintah berikut:
-```bash
-npm run dev
-```
-Setelah itu, buka tautan lokal yang ditampilkan di terminal (biasanya `http://localhost:5173/`) pada browser Anda.
-
-### D. Melakukan Build untuk Produksi
-```bash
-npm run build
-```
-
----
 
 ## 7. Menjalankan Unit Testing
 
@@ -151,66 +126,31 @@ Proyek ini telah dikonfigurasi dengan **Vitest** dan **React Testing Library**. 
 5. Pencarian buku dan filter status.
 6. Menampilkan halaman statistik koleksi buku.
 
-### Cara Menjalankan Pengujian:
-
-Jalankan perintah berikut di terminal:
-```bash
-npm run test
-```
-
-### Hasil Eksekusi Pengujian:
-
-```text
- RUN  v2.1.9 D:/iphone/Everything/TUGAS SEM 7/paw_praktikum_3
-
- ✓ src/test/App.test.jsx (6 tests) 597ms
-   ✓ 1. Menampilkan daftar buku awal dengan benar
-   ✓ 2. Menambahkan buku baru ke dalam daftar
-   ✓ 3. Menampilkan pesan kesalahan validasi saat judul atau penulis kosong
-   ✓ 4. Menghapus buku dari daftar koleksi
-   ✓ 5. Memfilter dan mencari buku berdasarkan kata kunci dan status
-   ✓ 6. Menampilkan halaman statistik dengan perhitungan jumlah buku
-
- Test Files  1 passed (1)
-      Tests  6 passed (6)
-```
-
----
 
 ## 8. Tangkapan Layar (Screenshots)
 
-> *Silakan tempatkan file gambar hasil screenshot aplikasi asli dan screenshot terminal pada folder `screenshots/` atau lampirkan pada laporan tugas Anda.*
+
 
 ### 1. Halaman Beranda (Home) - Desktop & Form
-<!-- Simpan screenshot tampilan beranda pada path: ./screenshots/home_page.png -->
-*(Tempatkan screenshot halaman Home di sini)*
-![Screenshot Halaman Home](./screenshots/home_page.png)
+
+
+<img width="497" height="128" alt="h1" src="https://github.com/user-attachments/assets/61de9dce-77f3-4795-b36d-f5a97e21cbd1" />
 
 ### 2. Validasi Form Input Kosong
-<!-- Simpan screenshot feedback visual error pada path: ./screenshots/form_validation.png -->
-*(Tempatkan screenshot feedback validasi error di sini)*
-![Screenshot Validasi Form](./screenshots/form_validation.png)
+
+<img width="211" height="239" alt="h2" src="https://github.com/user-attachments/assets/0df7e815-697b-4ba0-b13c-c52d0ea12f22" />
+
 
 ### 3. Filter dan Pencarian Buku
-<!-- Simpan screenshot fitur pencarian atau filter pada path: ./screenshots/search_filter.png -->
-*(Tempatkan screenshot fitur filter & pencarian di sini)*
-![Screenshot Filter dan Pencarian](./screenshots/search_filter.png)
+
+<img width="458" height="93" alt="h3" src="https://github.com/user-attachments/assets/dbf07a69-cb30-4123-a499-1cc25dcf46de" />
 
 ### 4. Halaman Statistik (Stats)
-<!-- Simpan screenshot halaman statistik pada path: ./screenshots/stats_page.png -->
-*(Tempatkan screenshot halaman Stats di sini)*
-![Screenshot Halaman Stats](./screenshots/stats_page.png)
+
+<img width="704" height="328" alt="h4" src="https://github.com/user-attachments/assets/e128d8aa-7f4f-4d0a-8988-681c3d1001d4" />
+
 
 ### 5. Hasil Unit Testing di Terminal
-<!-- Simpan screenshot terminal hasil uji 'npm run test' pada path: ./screenshots/unit_tests.png -->
-*(Tempatkan screenshot terminal hasil testing di sini)*
-![Screenshot Unit Test Terminal](./screenshots/unit_tests.png)
 
----
+<img width="623" height="182" alt="h5" src="https://github.com/user-attachments/assets/77d33980-3d03-4663-8606-81973f9c91f3" />
 
-## 9. Identitas Pengembang
-
-- **Nama**: Andre Prasetya Daely
-- **NIM**: 123140131
-- **Program Studi**: Teknik Informatika
-- **Mata Kuliah**: Praktikum Pengembangan Aplikasi Web (PAW) - Pertemuan 3
