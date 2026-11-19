@@ -81,53 +81,15 @@ andreprasetyadaely_123140131_pertemuan5/
 4. **`.gitignore`**:
    * Mengabaikan file cache Python (`__pycache__`) dan file konfigurasi IDE agar repository tetap bersih.
 5. **`README.md`**:
-   * Dokumentasi lengkap proyek, identitas mahasiswa, panduan penggunaan, serta tempat screenshot pengujian.
+   * Dokumentasi lengkap proyek, identitas mahasiswa, serta tempat screenshot pengujian.
 
----
 
-## 🚀 Panduan Menjalankan Program
-
-1. Buka terminal atau Command Prompt pada direktori project:
-   ```bash
-   cd andreprasetyadaely_123140131_pertemuan5
-   ```
-
-2. Jalankan program dengan perintah berikut:
-   ```bash
-   python main.py
-   ```
-   *(atau gunakan `python3 main.py` jika menggunakan sistem berbasis Linux/macOS).*
-
----
 
 ## 📷 Screenshot Hasil Program
 
 Bagian ini disediakan untuk melampirkan screenshot hasil eksekusi program di terminal:
 
-### 1. Proses Penambahan Buku dan Majalah
-> *Tempat Screenshot Penambahan Item & Validasi Penambahan:*
-<!-- Masukkan gambar di bawah ini, contoh: ![Penambahan Item](screenshots/1_tambah_item.png) -->
-```text
-[MASUKKAN SCREENSHOT PROSES PENAMBAHAN BUKU & MAJALAH DI SINI]
-```
+<img width="779" height="421" alt="Screenshot 2026-11-19 192637" src="https://github.com/user-attachments/assets/2e5696e0-f624-4a69-a6d5-e0c5bf396181" />
+<img width="803" height="383" alt="Screenshot 2026-11-19 192646" src="https://github.com/user-attachments/assets/45f0c12e-bd27-42f0-b7be-6e3af324465c" />
 
-### 2. Tampilan Katalog Perpustakaan
-> *Tempat Screenshot Tampilan Seluruh Katalog Koleksi:*
-<!-- Masukkan gambar di bawah ini, contoh: ![Katalog](screenshots/2_katalog.png) -->
-```text
-[MASUKKAN SCREENSHOT TAMPILAN KATALOG DI SINI]
-```
 
-### 3. Proses Pencarian Item Berdasarkan ID atau Judul
-> *Tempat Screenshot Hasil Pencarian Item (ID & Judul):*
-<!-- Masukkan gambar di bawah ini, contoh: ![Pencarian](screenshots/3_pencarian.png) -->
-```text
-[MASUKKAN SCREENSHOT PENCARIAN BERDASARKAN ID & JUDUL DI SINI]
-```
-
-### 4. Status Ketersediaan Item
-> *Tempat Screenshot Simulasi Peminjaman & Daftar Item Tersedia:*
-<!-- Masukkan gambar di bawah ini, contoh: ![Ketersediaan](screenshots/4_ketersediaan.png) -->
-```text
-[MASUKKAN SCREENSHOT STATUS KETERSEDIAAN ITEM DI SINI]
-```
