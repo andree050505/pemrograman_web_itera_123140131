@@ -1,4 +1,4 @@
-# Personal Book Manager (Tugas Praktikum 3)
+# Personal Book Manager 
 
 Aplikasi web manajemen koleksi buku pribadi yang dibuat menggunakan **React JS** dan **Vite**. Aplikasi ini dirancang untuk mempermudah pencatatan, pemantauan status membaca, dan pengelompokan buku favorit secara responsif dan interaktif.
 
@@ -38,51 +38,6 @@ Aplikasi web manajemen koleksi buku pribadi yang dibuat menggunakan **React JS**
 - **Context API** – Pengelolaan state aplikasi secara terpusat.
 - **Browser localStorage** – Penyimpanan data persisten di sisi klien.
 - **Vitest & React Testing Library** – Kerangka kerja pengujian unit (Unit Testing) dan lingkungan simulasi DOM (`jsdom`).
-
----
-
-## 4. Struktur Folder Proyek
-
-```text
-andre_123140131_pertemuan3/
-├── public/
-├── src/
-│   ├── components/
-│   │   ├── BookFilter/
-│   │   │   ├── BookFilter.jsx
-│   │   │   └── BookFilter.css
-│   │   ├── BookForm/
-│   │   │   ├── BookForm.jsx
-│   │   │   └── BookForm.css
-│   │   ├── BookList/
-│   │   │   ├── BookList.jsx
-│   │   │   └── BookList.css
-│   │   └── Navbar/
-│   │       ├── Navbar.jsx
-│   │       └── Navbar.css
-│   ├── context/
-│   │   └── BookContext.jsx
-│   ├── hooks/
-│   │   ├── useLocalStorage.js
-│   │   └── useBookStats.js
-│   ├── pages/
-│   │   ├── Home/
-│   │   │   ├── Home.jsx
-│   │   │   └── Home.css
-│   │   └── Stats/
-│   │       ├── Stats.jsx
-│   │       └── Stats.css
-│   ├── test/
-│   │   ├── setup.js
-│   │   └── App.test.jsx
-│   ├── App.jsx
-│   ├── index.css
-│   └── main.jsx
-├── index.html
-├── package.json
-├── vite.config.js
-└── README.md
-```
 
 ---
 
