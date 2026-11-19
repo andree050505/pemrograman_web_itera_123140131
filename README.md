@@ -1,12 +1,12 @@
 # Pengembangan Aplikasi Web - Institut Teknologi Sumatera (ITERA)
 
-Tugas praktikum mata kuliah **Pengembangan Aplikasi Web** 
+Tugas praktikum **Pengembangan Aplikasi Web** 
 
 ## Identitas 
 - **Nama** : Andre Prasetya Daely
 - **NIM** : 123140131
 - **Program Studi** : Teknik Informatika
-- **Institusi** : Institut Teknologi Sumatera (ITERA)
+- **Kelas** : RB
 
 ---
 
