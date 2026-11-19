@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini POS - Kasir Kantin Kampus</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 1. Header Aplikasi -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="brand">
+        <span class="brand-logo">dre</span>
+        <div>
+          <h1>Mini POS - Kasir Kantin Kampus</h1>
+          <p class="subtitle">Sistem Kasir Transaksi Mahasiswa & Civitas Kampus</p>
+        </div>
+      </div>
+      <div class="header-badge">
+        <span class="status-dot"></span> Kasir Aktif
+      </div>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <div class="pos-grid">
+      <!-- 2. Form Input Barang -->
+      <section class="card form-card">
+        <div class="card-header">
+          <h2>Input Barang</h2>
+          <span class="badge">Formulir Pesanan</span>
+        </div>
+        <form id="formBarang" novalidate>
+          <div class="form-group">
+            <label for="namaBarang">Nama Barang</label>
+            <input type="text" id="namaBarang" placeholder="Contoh: Nasi Goreng Kantin" autocomplete="off">
+            <span class="error-message" id="errorNama"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="hargaBarang">Harga Satuan (Rp)</label>
+            <input type="number" id="hargaBarang" placeholder="Minimal 500" min="500" step="1">
+            <span class="error-message" id="errorHarga"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="qtyBarang">Jumlah (Qty)</label>
+            <input type="number" id="qtyBarang" placeholder="Minimal 1" min="1" step="1" value="1">
+            <span class="error-message" id="errorQty"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="btnTambah">
+            + Tambah ke Keranjang
+          </button>
+        </form>
+      </section>
+
+      <!-- Bagian Transaksi: Keranjang, Ringkasan, & Pembayaran -->
+      <div class="transaction-column">
+        <!-- 3. Tabel Keranjang Belanja -->
+        <section class="card table-card">
+          <div class="card-header">
+            <h2>Keranjang Belanja</h2>
+            <span class="item-count" id="itemCount">0 Item</span>
+          </div>
+          <div class="table-responsive">
+            <table class="pos-table" id="tabelKeranjang">
+              <thead>
+                <tr>
+                  <th style="width: 50px;">No</th>
+                  <th>Nama Barang</th>
+                  <th>Harga</th>
+                  <th style="width: 80px;">Qty</th>
+                  <th>Subtotal</th>
+                  <th style="width: 90px; text-align: center;">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="bodyKeranjang">
+                <!-- Data keranjang akan dimuat via JavaScript -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <div class="checkout-grid">
+          <!-- 4. Ringkasan Total Belanja & Diskon -->
+          <section class="card summary-card">
+            <div class="card-header">
+              <h2>Ringkasan Biaya</h2>
+            </div>
+            <div class="summary-list">
+              <div class="summary-item">
+                <span>Total Belanja</span>
+                <span class="amount" id="totalBelanja">Rp 0</span>
+              </div>
+              <div class="summary-item discount-item" id="diskonRow">
+                <span>
+                  Diskon Otomatis (10%)
+                  <small class="discount-note">*Min. belanja Rp 50.000</small>
+                </span>
+                <span class="amount text-success" id="diskon">Rp 0</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-item grand-total">
+                <span>Total Akhir</span>
+                <span class="amount text-primary" id="totalAkhir">Rp 0</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- 5. Form Pembayaran dan Kembalian & 6. Tombol Transaksi Baru -->
+          <section class="card payment-card">
+            <div class="card-header">
+              <h2>Pembayaran Kasir</h2>
+            </div>
+            <div class="payment-body">
+              <div class="form-group">
+                <label for="uangBayar">Uang Bayar (Rp)</label>
+                <input type="number" id="uangBayar" placeholder="Masukkan jumlah pembayaran" min="0">
+              </div>
+
+              <div class="payment-status-box" id="paymentStatusBox">
+                <div class="status-label" id="statusLabel">Status Pembayaran:</div>
+                <div class="status-value" id="statusValue">Menunggu input uang bayar</div>
+                <div class="change-amount" id="infoKembalian">Rp 0</div>
+              </div>
+
+              <!-- 6. Tombol Transaksi Baru -->
+              <button type="button" class="btn btn-secondary" id="btnResetTransaksi">
+                🔄 Transaksi Baru
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <p>Praktikum Pengembangan Aplikasi Web &bull; Modul 1: Mini POS Kasir Kantin Kampus</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

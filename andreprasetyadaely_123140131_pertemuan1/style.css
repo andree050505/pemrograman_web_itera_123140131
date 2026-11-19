@@ -1,0 +1,497 @@
+/* ========================================================
+   Mini POS - Kasir Kantin Kampus
+   Style: CSS3 Tema Gelap (Dark Mode) Modern & Responsif
+   ======================================================== */
+
+:root {
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --secondary: #94a3b8;
+  --secondary-hover: #cbd5e1;
+  --success: #10b981;
+  --success-light: #34d399;
+  --danger: #ef4444;
+  --danger-hover: #dc2626;
+  --danger-light: #f87171;
+  --warning: #f59e0b;
+  --bg-main: #0b0f19;
+  --bg-card: #1e293b;
+  --bg-input: #0f172a;
+  --bg-table-header: #141e30;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border: #334155;
+  --radius: 12px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ========================================================
+   1. Header & Logo
+   ======================================================== */
+.header {
+  background-color: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 16px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Logo: Nama dre dengan font tebal */
+.brand-logo {
+  font-size: 2.2rem;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -1.5px;
+  color: #38bdf8;
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.35);
+  user-select: none;
+}
+
+.header h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.header .subtitle {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: rgba(16, 185, 129, 0.12);
+  color: var(--success-light);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--success);
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.8);
+}
+
+/* ========================================================
+   Layout & Cards
+   ======================================================== */
+.main-content {
+  flex: 1;
+  padding-top: 28px;
+  padding-bottom: 36px;
+}
+
+.pos-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 22px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 12px;
+}
+
+.card-header h2 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.badge {
+  background-color: #334155;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.item-count {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #60a5fa;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+/* ========================================================
+   2. Form Input Barang
+   ======================================================== */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #cbd5e1;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  background-color: var(--bg-input);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #111827;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+}
+
+.form-group input.is-invalid {
+  border-color: var(--danger);
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.error-message {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--danger-light);
+  margin-top: 5px;
+  min-height: 18px;
+  font-weight: 500;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 11px 18px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover);
+}
+
+.btn-secondary {
+  background-color: #334155;
+  color: #e2e8f0;
+  border: 1px solid #475569;
+}
+
+.btn-secondary:hover {
+  background-color: #475569;
+  color: #ffffff;
+}
+
+.btn-danger {
+  background-color: rgba(239, 68, 68, 0.15);
+  color: var(--danger-light);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  width: auto;
+  border-radius: 6px;
+}
+
+.btn-danger:hover {
+  background-color: var(--danger);
+  color: #ffffff;
+}
+
+/* ========================================================
+   3. Tabel Keranjang Belanja
+   ======================================================== */
+.transaction-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.table-responsive {
+  overflow-x: auto;
+}
+
+.pos-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.pos-table th {
+  background-color: var(--bg-table-header);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 14px;
+  border-bottom: 2px solid var(--border);
+}
+
+.pos-table td {
+  padding: 14px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border);
+  color: #e2e8f0;
+  vertical-align: middle;
+}
+
+.pos-table tbody tr:hover {
+  background-color: #243247;
+}
+
+.pos-table td.text-center {
+  text-align: center;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 36px 16px !important;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* ========================================================
+   4. Ringkasan Biaya & 5. Pembayaran
+   ======================================================== */
+.checkout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.summary-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+}
+
+.summary-item .amount {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.discount-item {
+  background: rgba(16, 185, 129, 0.12);
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed rgba(52, 211, 153, 0.4);
+}
+
+.discount-note {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--success-light);
+  font-weight: 500;
+}
+
+.summary-divider {
+  height: 1px;
+  background-color: var(--border);
+  margin: 6px 0;
+}
+
+.grand-total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.grand-total .amount {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.text-success {
+  color: var(--success-light);
+}
+
+.text-primary {
+  color: #60a5fa;
+}
+
+/* Pembayaran Card */
+.payment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.payment-status-box {
+  background-color: var(--bg-input);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 14px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.status-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.status-value {
+  font-size: 0.92rem;
+  font-weight: 600;
+  margin-top: 4px;
+  color: var(--text-main);
+}
+
+.change-amount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-top: 6px;
+  color: var(--text-main);
+}
+
+/* Status variants tema gelap */
+.payment-status-box.status-success {
+  background-color: rgba(16, 185, 129, 0.15);
+  border-color: rgba(52, 211, 153, 0.4);
+}
+.payment-status-box.status-success .status-value,
+.payment-status-box.status-success .change-amount {
+  color: var(--success-light);
+}
+
+.payment-status-box.status-warning {
+  background-color: rgba(239, 68, 68, 0.15);
+  border-color: rgba(248, 113, 113, 0.4);
+}
+.payment-status-box.status-warning .status-value,
+.payment-status-box.status-warning .change-amount {
+  color: var(--danger-light);
+}
+
+/* ========================================================
+   Footer
+   ======================================================== */
+.footer {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+  margin-top: auto;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ========================================================
+   Responsif (Mobile & Tablet)
+   ======================================================== */
+@media (max-width: 992px) {
+  .pos-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .pos-table th, .pos-table td {
+    padding: 10px 8px;
+    font-size: 0.85rem;
+  }
+
+  .grand-total .amount,
+  .change-amount {
+    font-size: 1.15rem;
+  }
+}
