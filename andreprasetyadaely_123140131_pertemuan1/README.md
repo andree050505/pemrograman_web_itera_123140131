@@ -1,4 +1,4 @@
-# Mini POS (Kasir Kantin Kampus)
+# Mini POS dre (Kasir Kantin Kampus)
 
 Aplikasi kasir web sederhana berbasis HTML5, CSS3, dan JavaScript Vanilla yang dirancang untuk kebutuhan transaksi kasir kantin kampus. Proyek ini dibuat untuk memenuhi tugas praktikum mata kuliah **Pengembangan Aplikasi Web**.
 
@@ -8,14 +8,14 @@ Aplikasi kasir web sederhana berbasis HTML5, CSS3, dan JavaScript Vanilla yang d
 
 - **Nama** : Andre Prasetya Daely
 - **NIM** : 123140131
-- **Kelas Praktikum** : Pemrograman Aplikasi Web (PAW) - ITERA
-- **Mata Kuliah** : Pengembangan Aplikasi Web
+- **Kelas Praktikum** : Pemrograman Aplikasi Web (PAW) RB
+- **Mata Kuliah** : Pengembangan Aplikasi Web RB
 
 ---
 
 ## Deskripsi & Tujuan Aplikasi
 
-Aplikasi **Mini POS (Kasir Kantin Kampus)** adalah sistem kasir berbasis peramban (*web browser*) yang membantu kasir kantin dalam mencatat pesanan makanan/minuman, menghitung subtotal dan diskon otomatis, mengelola data pembayaran, serta menghitung uang kembalian atau kekurangan bayar secara akurat.
+Aplikasi **Mini POS dre** adalah sistem kasir berbasis peramban (*web browser*) yang membantu kasir kantin dalam mencatat pesanan makanan/minuman, menghitung subtotal dan diskon otomatis, mengelola data pembayaran, serta menghitung uang kembalian atau kekurangan bayar secara akurat.
 
 Tujuan pembuatan aplikasi ini meliputi:
 1. Memahami manipulasi *Document Object Model* (DOM) menggunakan JavaScript Vanilla.
@@ -124,27 +124,27 @@ Aplikasi ini dapat dijalankan langsung di komputer lokal menggunakan **Visual St
 
 ## Screenshot Aplikasi
 
-Berikut adalah dokumentasi tampilan dan pengujian aplikasi Mini POS:
+Berikut adalah dokumentasi tampilan dan pengujian aplikasi Mini POS dre:
 
 ### 1. Tampilan Utama Dashboard Kasir
-*Tampilan antarmuka utama saat aplikasi pertama kali dimuat dengan keranjang belanja kosong.*
 
-![Tampilan Utama Aplikasi]<img width="308" height="438" alt="S1" src="https://github.com/user-attachments/assets/9923977d-1712-497f-9f81-acf73a1e6dd2" />
+<img width="308" height="438" alt="S1" src="https://github.com/user-attachments/assets/9923977d-1712-497f-9f81-acf73a1e6dd2" />
 
 
 ### 2. Tampilan Validasi Error Formulir
-*Tampilan ketika input nama, harga, atau qty tidak memenuhi kriteria validasi (muncul pesan teks merah).*
 
-![Tampilan Validasi Error](screenshot-error.png)
-*(Ganti tautan di atas dengan file screenshot pengujian error Anda)*
+
+<img width="248" height="335" alt="S2" src="https://github.com/user-attachments/assets/4b2dbc02-f773-42e7-b50a-dd0558e4ab4c" />
+
+
 
 ### 3. Tampilan Hasil Transaksi & Pembayaran
-*Tampilan saat beberapa item barang dimasukkan ke keranjang, diskon 10% aktif (belanja >= Rp50.000), serta penghitungan uang bayar dan kembalian.*
 
-![Tampilan Hasil Transaksi](screenshot-transaksi.png)
-*(Ganti tautan di atas dengan file screenshot transaksi Anda)*
 
----
+<img width="563" height="274" alt="S3" src="https://github.com/user-attachments/assets/aad38f0f-c19c-44e9-8076-0949183054d1" />
+
+
+
 
 ## Skenario Pengujian yang Telah Teruji
 
