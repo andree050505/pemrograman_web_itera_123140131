@@ -113,17 +113,15 @@ python main.py
 ## 5. Dokumentasi Screenshot Hasil Eksekusi
 
 ### Screenshot Soal 1 – Penghitung BMI (`tugas1_bmi.py`)
-![Screenshot Soal 1](screenshots/screenshot_soal1_bmi.png)
-*(Simpan screenshot hasil eksekusi terminal pada folder `screenshots/screenshot_soal1_bmi.png`)*
+<img width="631" height="127" alt="Screenshot 2026-11-19 181614" src="https://github.com/user-attachments/assets/b01b88c9-c346-4d15-ac63-42fe93029e2e" />
 
 ---
 
 ### Screenshot Soal 2 – Pengelolaan Nilai Mahasiswa (`tugas2_nilai_mahasiswa.py`)
-![Screenshot Soal 2](screenshots/screenshot_soal2_nilai.png)
-*(Simpan screenshot hasil eksekusi terminal pada folder `screenshots/screenshot_soal2_nilai.png`)*
+<img width="669" height="236" alt="Screenshot 2026-11-19 181703" src="https://github.com/user-attachments/assets/a60d3d8c-226c-4627-a6e1-a6908b4259a8" />
+
 
 ---
 
 ### Screenshot Soal 3 – Modul Matematika Python (`main.py`)
-![Screenshot Soal 3](screenshots/screenshot_soal3_math.png)
-*(Simpan screenshot hasil eksekusi terminal pada folder `screenshots/screenshot_soal3_math.png`)*
+<img width="611" height="446" alt="Screenshot 2026-11-19 181741" src="https://github.com/user-attachments/assets/d5e54559-474a-492b-950d-418b82f9f9ed" />
