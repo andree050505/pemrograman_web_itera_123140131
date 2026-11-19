@@ -1,6 +1,6 @@
 # Pemrograman Web - Institut Teknologi Sumatera (ITERA)
 
-Repositori ini berisi kumpulan tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
+tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 
 ## Identitas Praktikan
 - **Nama** : Andre Prasetya Daely
@@ -30,3 +30,4 @@ pemrograman_web_itera_123140131/
     ├── README.md        # Laporan dokumentasi pertemuan 1
     └── modul/           # Berisi file latihan materi praktikum
 ```
+##Dokumentasi
