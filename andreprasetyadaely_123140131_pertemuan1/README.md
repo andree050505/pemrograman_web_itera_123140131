@@ -8,7 +8,7 @@ Aplikasi kasir web sederhana berbasis HTML5, CSS3, dan JavaScript Vanilla yang d
 
 - **Nama** : Andre Prasetya Daely
 - **NIM** : 123140131
-- **Kelas Praktikum** : Pemrograman Aplikasi Web (PAW) RB
+- **Kelas Praktikum** : RB
 - **Mata Kuliah** : Pengembangan Aplikasi Web RB
 
 ---
@@ -68,20 +68,6 @@ Tujuan pembuatan aplikasi ini meliputi:
 
 ---
 
-## Struktur Folder Proyek
-
-```text
-pemrograman_web_itera_123140131/
-└── andreprasetyadaely_123140131_pertemuan1/
-    ├── index.html       # Struktur utama antarmuka kasir
-    ├── style.css        # Desain visual, tata letak, dan responsivitas
-    ├── script.js        # Logika validasi, kalkulasi, DOM, dan localStorage
-    ├── README.md        # Dokumentasi lengkap proyek
-    └── modul/           # Folder pendukung materi/modul praktikum
-```
-
----
-
 ## Penjelasan Teknis Singkat
 
 ### A. Validasi Formulir (`validasiInput`)
@@ -102,25 +88,6 @@ Jika salah satu kondisi gagal, class `.is-invalid` ditambahkan pada input dan pe
 
 ---
 
-## Cara Menjalankan Aplikasi
-
-Aplikasi ini dapat dijalankan langsung di komputer lokal menggunakan **Visual Studio Code** dan ekstensi **Live Server**:
-
-1. **Buka Folder Proyek di VS Code**:
-   - Buka aplikasi Visual Studio Code.
-   - Pilih menu **File** &rarr; **Open Folder...**, lalu arahkan ke folder proyek ini.
-2. **Pasang Ekstensi Live Server** (jika belum terpasang):
-   - Klik ikon *Extensions* pada sidebar kiri (atau tekan `Ctrl + Shift + X`).
-   - Cari ekstensi bernama **Live Server** (oleh *Ritwick Dey*).
-   - Klik tombol **Install**.
-3. **Jalankan Aplikasi**:
-   - Buka file `index.html`.
-   - Klik kanan pada editor lalu pilih **Open with Live Server**, atau klik tombol **Go Live** pada *status bar* di sudut kanan bawah VS Code.
-   - Peramban (*browser*) bawaan akan terbuka secara otomatis di alamat `http://127.0.0.1:5500/index.html`.
-4. **Alternatif Tanpa Live Server**:
-   - Klik ganda langsung pada file `index.html` dari File Explorer Windows untuk membukanya di browser apa pun (Google Chrome, Microsoft Edge, Mozilla Firefox).
-
----
 
 ## Screenshot Aplikasi
 
