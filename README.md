@@ -18,16 +18,5 @@ tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 
 ---
 
-## Struktur Repositori
 
-```text
-pemrograman_web_itera_123140131/
-├── README.md
-└── andreprasetyadaely_123140131_pertemuan1/
-    ├── index.html       # Struktur antarmuka Mini POS
-    ├── style.css        # Desain CSS tema gelap modern
-    ├── script.js        # Logika aplikasi, validasi & kalkulator
-    ├── README.md        # Laporan dokumentasi pertemuan 1
-    └── modul/           # Berisi file latihan materi praktikum
-```
 
