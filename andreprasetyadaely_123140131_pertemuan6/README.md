@@ -2,7 +2,7 @@
 ## RESTful API Manajemen Mahasiswa & Mata Kuliah dengan Pyramid Framework
 
 ### Identitas
-- **Nama Lengkap** : Andre Prasetya Daely
+- **Nama** : Andre Prasetya Daely
 - **NIM**          : 123140131
 - **Kelas**        : RB
 
@@ -27,7 +27,7 @@ Aplikasi ini melanjutkan modul praktikum sebelumnya (Manajemen Mahasiswa) dengan
 
 ---
 
-## 4. Pengujian API dengan cURL
+## 3. Pengujian API dengan cURL
 
 ### 1. GET: Menampilkan Seluruh Mata Kuliah
 ```bash
