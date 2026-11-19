@@ -18,5 +18,6 @@ Tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 | 2 | [`andreprasetyadaely_123140131_pertemuan2/`](./andreprasetyadaely_123140131_pertemuan2/) | ITERA Student Productivity Hub (jadwal tugas) | Selesai |
 | 3 | [`andreprasetyadaely_123140131_pertemuan3/`](./andreprasetyadaely_123140131_pertemuan3/) | Personal Book Manager (Manajemen Buku Pribadi) | Selesai |
 | 4 | [`andreprasetyadaely_123140131_pertemuan4/`](./andreprasetyadaely_123140131_pertemuan4/) | Dasar Pemrograman Python (BMI, Nilai Mahasiswa, Modul Math) | Selesai |
+| 5 | [`andreprasetyadaely_123140131_pertemuan5/`](./andreprasetyadaely_123140131_pertemuan5/) | Sistem Manajemen Perpustakaan (OOP Python) | Selesai |
 
 ---

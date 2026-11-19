@@ -1,0 +1,133 @@
+# Tugas 5 - Sistem Manajemen Perpustakaan Sederhana
+
+Proyek ini merupakan implementasi **Sistem Manajemen Perpustakaan Sederhana** berbasis konsep *Object-Oriented Programming* (OOP) dengan bahasa pemrograman Python. Sistem ini mengangkat tema **Perpustakaan Koleksi Manga & Pop Culture**.
+
+---
+
+## 👤 Identitas Mahasiswa
+
+* **Nama Lengkap** : Andre Prasetya Daely
+* **NIM** : 123140131
+* **Kelas Praktikum** : RB
+
+---
+
+## 📖 Deskripsi Singkat Sistem
+
+Sistem ini dirancang untuk mengelola koleksi perpustakaan yang mencakup berbagai item bacaan seperti **Buku/Manga** dan **Majalah**. Sistem menyediakan kemampuan untuk:
+1. Menambahkan item baru dengan validasi tipe data berbasis class parent.
+2. Menampilkan seluruh katalog koleksi yang terdaftar.
+3. Menampilkan daftar item yang sedang tersedia (belum dipinjam).
+4. Melakukan simulasi peminjaman item dan pembaruan status ketersediaan.
+5. Mencari koleksi berdasarkan **ID** unik maupun kata kunci pada **Judul**.
+
+---
+
+## 🧠 Penerapan 5 Konsep OOP
+
+### 1. Abstraction (Abstraksi)
+* **Penerapan**: Menggunakan modul bawaan `abc` (`ABC` dan `@abstractmethod`) untuk membuat abstract base class `LibraryItem`.
+* **Bagian Kode**: Method `@abstractmethod def get_detail(self):` pada class `LibraryItem` di [library_item.py](file:///d:/iphone/Everything/TUGAS%20SEM%207/paw_praktikum_5/Andre_Prasetya_Daely_123140131_pertemuan5/library_item.py).
+* **Fungsi**: Memaksa seluruh subclass turunan (`Book` dan `Magazine`) untuk mendefinisikan implementasi konkrit method `get_detail()`.
+
+### 2. Inheritance (Pewarisan)
+* **Penerapan**: Class `Book` dan `Magazine` merupakan subclass yang mewarisi atribut dan method dari superclass `LibraryItem`.
+* **Bagian Kode**: `class Book(LibraryItem):` dan `class Magazine(LibraryItem):` menggunakan `super().__init__(item_id, judul)` untuk menginisialisasi atribut turunan.
+
+### 3. Encapsulation (Enkapsulasi)
+* **Penerapan**: Melindungi atribut sensitif menggunakan visibilitas protected (`_`) dan private (`__`) serta menyediakan akses terkontrol melalui `@property`.
+* **Bagian Kode**:
+  * `self.__is_dipinjam` pada class `LibraryItem` bersifat private sehingga tidak dapat diubah sembarangan dari luar kelas.
+  * Disediakan property `@property def is_dipinjam(self):` dan `@property def status_peminjaman(self):` untuk membaca nilai status secara aman.
+  * Perubahan status hanya diizinkan melalui method `pinjam()` dan `kembalikan()`.
+  * Atribut `__koleksi` pada class `Library` bersifat private untuk menjamin integritas data daftar item.
+
+### 4. Polymorphism (Polimorfisme)
+* **Penerapan**: Satu interface method yang sama (`get_detail()`) menghasilkan perilaku atau format keluaran yang berbeda sesuai dengan tipe objek yang memanggilnya.
+* **Bagian Kode**:
+  * Pada `Book`: menampilkan detail judul, mangaka/penulis, jumlah halaman, dan status.
+  * Pada `Magazine`: menampilkan detail judul, nomor edisi, penerbit, dan status.
+  * Saat loop koleksi di [library.py](file:///d:/iphone/Everything/TUGAS%20SEM%207/paw_praktikum_5/Andre_Prasetya_Daely_123140131_pertemuan5/library.py) atau iterasi di `main.py`, pemanggilan `item.get_detail()` secara dinamis menyesuaikan objek item yang sedang diproses.
+
+### 5. Class dan Object
+* **Penerapan**: Membuat cetak biru (*blueprint*) berupa class (`LibraryItem`, `Book`, `Magazine`, `Library`) dan melakukan instansiasi objek riil (misal objek komik `One Piece Vol. 100`, majalah `Weekly Shonen Jump`, dan objek perpustakaan `perpustakaan`).
+
+---
+
+## 📁 Struktur & Penjelasan File
+
+Struktur direktori proyek adalah sebagai berikut:
+
+```text
+andreprasetyadaely_123140131_pertemuan5/
+├── README.md
+├── .gitignore
+├── library_item.py
+├── library.py
+└── main.py
+```
+
+### Penjelasan File:
+1. **`library_item.py`**:
+   * Berisi abstract class `LibraryItem` dengan atribut ID, judul, dan status peminjaman private.
+   * Mendefinisikan abstract method `get_detail()`.
+   * Berisi subclass `Book` (dengan atribut tambahan `penulis` dan `jumlah_halaman`).
+   * Berisi subclass `Magazine` (dengan atribut tambahan `edisi` dan `penerbit`).
+2. **`library.py`**:
+   * Berisi class `Library` yang mengelola list koleksi (`__koleksi`).
+   * Memiliki method `tambah_item()`, `tampilkan_katalog()`, `tampilkan_item_tersedia()`, `cari_berdasarkan_id()`, dan `cari_berdasarkan_judul()`.
+3. **`main.py`**:
+   * File titik masuk (*entry point*) untuk menguji seluruh fungsi sistem secara menyeluruh, termasuk penambahan item, tampilan katalog, simulasi peminjaman, demonstrasi polimorfisme, dan pencarian.
+4. **`.gitignore`**:
+   * Mengabaikan file cache Python (`__pycache__`) dan file konfigurasi IDE agar repository tetap bersih.
+5. **`README.md`**:
+   * Dokumentasi lengkap proyek, identitas mahasiswa, panduan penggunaan, serta tempat screenshot pengujian.
+
+---
+
+## 🚀 Panduan Menjalankan Program
+
+1. Buka terminal atau Command Prompt pada direktori project:
+   ```bash
+   cd andreprasetyadaely_123140131_pertemuan5
+   ```
+
+2. Jalankan program dengan perintah berikut:
+   ```bash
+   python main.py
+   ```
+   *(atau gunakan `python3 main.py` jika menggunakan sistem berbasis Linux/macOS).*
+
+---
+
+## 📷 Screenshot Hasil Program
+
+Bagian ini disediakan untuk melampirkan screenshot hasil eksekusi program di terminal:
+
+### 1. Proses Penambahan Buku dan Majalah
+> *Tempat Screenshot Penambahan Item & Validasi Penambahan:*
+<!-- Masukkan gambar di bawah ini, contoh: ![Penambahan Item](screenshots/1_tambah_item.png) -->
+```text
+[MASUKKAN SCREENSHOT PROSES PENAMBAHAN BUKU & MAJALAH DI SINI]
+```
+
+### 2. Tampilan Katalog Perpustakaan
+> *Tempat Screenshot Tampilan Seluruh Katalog Koleksi:*
+<!-- Masukkan gambar di bawah ini, contoh: ![Katalog](screenshots/2_katalog.png) -->
+```text
+[MASUKKAN SCREENSHOT TAMPILAN KATALOG DI SINI]
+```
+
+### 3. Proses Pencarian Item Berdasarkan ID atau Judul
+> *Tempat Screenshot Hasil Pencarian Item (ID & Judul):*
+<!-- Masukkan gambar di bawah ini, contoh: ![Pencarian](screenshots/3_pencarian.png) -->
+```text
+[MASUKKAN SCREENSHOT PENCARIAN BERDASARKAN ID & JUDUL DI SINI]
+```
+
+### 4. Status Ketersediaan Item
+> *Tempat Screenshot Simulasi Peminjaman & Daftar Item Tersedia:*
+<!-- Masukkan gambar di bawah ini, contoh: ![Ketersediaan](screenshots/4_ketersediaan.png) -->
+```text
+[MASUKKAN SCREENSHOT STATUS KETERSEDIAAN ITEM DI SINI]
+```
