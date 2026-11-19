@@ -52,8 +52,8 @@ Tugas Praktikum ini dibangun dengan mengimplementasikan standar arsitektur moder
 > **Catatan Praktikan**: Silakan simpan tangkapan layar antarmuka aplikasi pada folder `assets/screenshot.png` untuk melengkapi tampilan di bawah ini.
 
 | Tampilan Mode Terang (Light Mode) | Tampilan Mode Gelap (Dark Mode) |
-| :---: | :---: |
-| ![Light Mode Screenshot](assets/screenshot.png) | *(Dapat ditambahkan screenshot Dark Mode)* |
+|<img width="466" height="427" alt="ss2" src="https://github.com/user-attachments/assets/82ecee87-12b7-4e17-9ea5-17e2e672783d" /> | <img width="464" height="428" alt="ss1" src="https://github.com/user-attachments/assets/970b3b77-cb76-4ab8-9ab4-952623c10c90" /> |
+
 
 ---
 
