@@ -1,10 +1,6 @@
 # Tugas 5 - Sistem Manajemen Perpustakaan Sederhana
 
-Proyek ini merupakan implementasi **Sistem Manajemen Perpustakaan Sederhana** berbasis konsep *Object-Oriented Programming* (OOP) dengan bahasa pemrograman Python. Sistem ini mengangkat tema **Perpustakaan Koleksi Manga & Pop Culture**.
-
----
-
-## 👤 Identitas Mahasiswa
+##  Identitas 
 
 * **Nama Lengkap** : Andre Prasetya Daely
 * **NIM** : 123140131
@@ -12,7 +8,7 @@ Proyek ini merupakan implementasi **Sistem Manajemen Perpustakaan Sederhana** be
 
 ---
 
-## 📖 Deskripsi Singkat Sistem
+##  Deskripsi Singkat Sistem
 
 Sistem ini dirancang untuk mengelola koleksi perpustakaan yang mencakup berbagai item bacaan seperti **Buku/Manga** dan **Majalah**. Sistem menyediakan kemampuan untuk:
 1. Menambahkan item baru dengan validasi tipe data berbasis class parent.
@@ -23,11 +19,11 @@ Sistem ini dirancang untuk mengelola koleksi perpustakaan yang mencakup berbagai
 
 ---
 
-## 🧠 Penerapan 5 Konsep OOP
+##  Penerapan 5 Konsep OOP
 
 ### 1. Abstraction (Abstraksi)
 * **Penerapan**: Menggunakan modul bawaan `abc` (`ABC` dan `@abstractmethod`) untuk membuat abstract base class `LibraryItem`.
-* **Bagian Kode**: Method `@abstractmethod def get_detail(self):` pada class `LibraryItem` di [library_item.py](file:///d:/iphone/Everything/TUGAS%20SEM%207/paw_praktikum_5/Andre_Prasetya_Daely_123140131_pertemuan5/library_item.py).
+* **Bagian Kode**: Method `@abstractmethod def get_detail(self):` pada class `LibraryItem` di [library_item.py]
 * **Fungsi**: Memaksa seluruh subclass turunan (`Book` dan `Magazine`) untuk mendefinisikan implementasi konkrit method `get_detail()`.
 
 ### 2. Inheritance (Pewarisan)
@@ -47,25 +43,12 @@ Sistem ini dirancang untuk mengelola koleksi perpustakaan yang mencakup berbagai
 * **Bagian Kode**:
   * Pada `Book`: menampilkan detail judul, mangaka/penulis, jumlah halaman, dan status.
   * Pada `Magazine`: menampilkan detail judul, nomor edisi, penerbit, dan status.
-  * Saat loop koleksi di [library.py](file:///d:/iphone/Everything/TUGAS%20SEM%207/paw_praktikum_5/Andre_Prasetya_Daely_123140131_pertemuan5/library.py) atau iterasi di `main.py`, pemanggilan `item.get_detail()` secara dinamis menyesuaikan objek item yang sedang diproses.
+  * Saat loop koleksi di [library.py] `main.py`, pemanggilan `item.get_detail()` secara dinamis menyesuaikan objek item yang sedang diproses.
 
 ### 5. Class dan Object
 * **Penerapan**: Membuat cetak biru (*blueprint*) berupa class (`LibraryItem`, `Book`, `Magazine`, `Library`) dan melakukan instansiasi objek riil (misal objek komik `One Piece Vol. 100`, majalah `Weekly Shonen Jump`, dan objek perpustakaan `perpustakaan`).
 
 ---
-
-## 📁 Struktur & Penjelasan File
-
-Struktur direktori proyek adalah sebagai berikut:
-
-```text
-andreprasetyadaely_123140131_pertemuan5/
-├── README.md
-├── .gitignore
-├── library_item.py
-├── library.py
-└── main.py
-```
 
 ### Penjelasan File:
 1. **`library_item.py`**:
