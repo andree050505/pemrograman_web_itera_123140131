@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITERA Student Productivity Hub - Personal Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- HEADER UTAMA -->
+        <header class="dashboard-header">
+            <div class="brand-wrapper">
+                <div class="brand-icon">🎓</div>
+                <div class="brand-info">
+                    <h1 class="brand-title">ITERA Productivity Hub</h1>
+                    <p class="brand-subtitle" id="student-greeting">Halo, Mahasiswa ITERA!</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <div class="clock-card">
+                    <div class="clock-time" id="digital-clock">--:--:-- WIB</div>
+                    <div class="clock-date" id="digital-date">Memuat tanggal...</div>
+                </div>
+
+                <button id="theme-toggle-btn" class="btn-theme-toggle" aria-label="Toggle tema gelap/terang">
+                    <span id="theme-icon">🌙</span>
+                    <span id="theme-text">Mode Gelap</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- WIDGET ASINKRON: CUACA & KUTIPAN MOTIVASI -->
+        <section class="async-widgets-grid">
+            <!-- Widget 1: Cuaca Kampus ITERA (Open-Meteo API) -->
+            <div class="widget-card">
+                <div class="widget-header">
+                    <h3 class="widget-title">⛅ Cuaca Real-Time ITERA</h3>
+                    <button id="refresh-weather-btn" class="btn-icon-refresh" title="Perbarui data cuaca">🔄</button>
+                </div>
+                <div id="weather-widget-content">
+                    <div class="loading-state">
+                        <span class="spinner"></span>
+                        <p>Memuat cuaca kampus ITERA...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Widget 2: Kutipan Motivasi Harian (DummyJSON Quotes API) -->
+            <div class="widget-card">
+                <div class="widget-header">
+                    <h3 class="widget-title">💡 Inspirasi & Kutipan Harian</h3>
+                    <button id="refresh-quote-btn" class="btn-icon-refresh" title="Ambil kutipan baru">🔄</button>
+                </div>
+                <div id="quote-widget-content">
+                    <div class="loading-state">
+                        <span class="spinner"></span>
+                        <p>Mengambil kutipan motivasi...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTIK PRODUKTIVITAS RINGKAS -->
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-content">
+                    <span class="stat-label">Total Tugas</span>
+                    <span class="stat-number" id="stat-total">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">⏳</div>
+                <div class="stat-content">
+                    <span class="stat-label">Belum Selesai</span>
+                    <span class="stat-number" id="stat-pending">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">✅</div>
+                <div class="stat-content">
+                    <span class="stat-label">Selesai</span>
+                    <span class="stat-number" id="stat-completed">0</span>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-content">
+                    <span class="stat-label">Prioritas Tinggi</span>
+                    <span class="stat-number" id="stat-urgent">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- KONTEN UTAMA: FORM & DAFTAR TUGAS -->
+        <main class="dashboard-main-grid">
+            <!-- PANEL KIRI: FORM TAMBAH TUGAS -->
+            <aside class="form-panel">
+                <div class="form-card">
+                    <h2 class="section-title">➕ Tambah Tugas Kuliah</h2>
+                    <p class="section-desc">Catat deadline dan prioritas tugas akademikmu</p>
+
+                    <form id="task-form">
+                        <div class="form-group">
+                            <label for="task-title">Judul Tugas / Proyek *</label>
+                            <input type="text" id="task-title" class="form-input" placeholder="Contoh: Laporan Akhir Praktikum Web" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="task-course">Mata Kuliah</label>
+                            <input type="text" id="task-course" class="form-input" placeholder="Contoh: Pemrograman Berbasis Web" list="course-suggestions">
+                            <datalist id="course-suggestions">
+                                <option value="Pemrograman Berbasis Web">
+                                <option value="Basis Data">
+                                <option value="Struktur Data & Algoritma">
+                                <option value="Jaringan Komputer">
+                                <option value="Kecerdasan Buatan">
+                                <option value="Rekayasa Perangkat Lunak">
+                                <option value="Sistem Operasi">
+                            </datalist>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="task-deadline">Tenggat Waktu (Deadline)</label>
+                            <input type="datetime-local" id="task-deadline" class="form-input">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="task-priority">Tingkat Prioritas</label>
+                            <select id="task-priority" class="form-select">
+                                <option value="low">🌱 Rendah (Fleksibel)</option>
+                                <option value="medium" selected>⚡ Sedang (Standar)</option>
+                                <option value="high">🔥 Tinggi (Mendesak)</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="task-notes">Catatan Tambahan (Opsional)</label>
+                            <textarea id="task-notes" class="form-textarea" placeholder="Instruksi tugas, link referensi, atau pembagian kelompok..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary">
+                            <span>Simpan Tugas</span>
+                        </button>
+                    </form>
+                </div>
+            </aside>
+
+            <!-- PANEL KANAN: DAFTAR TUGAS & FILTER -->
+            <section class="tasks-panel">
+                <!-- FILTER & PENCARIAN -->
+                <div class="filter-bar">
+                    <div class="search-box">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="search-task-input" class="search-input" placeholder="Cari berdasarkan judul, mata kuliah, atau catatan...">
+                    </div>
+
+                    <div class="filter-controls-row">
+                        <div class="dropdown-filters">
+                            <select id="filter-status" class="filter-select" aria-label="Filter Status">
+                                <option value="all">Semua Status</option>
+                                <option value="pending">Belum Selesai</option>
+                                <option value="completed">Selesai</option>
+                            </select>
+
+                            <select id="filter-priority" class="filter-select" aria-label="Filter Prioritas">
+                                <option value="all">Semua Prioritas</option>
+                                <option value="high">🔥 Prioritas Tinggi</option>
+                                <option value="medium">⚡ Prioritas Sedang</option>
+                                <option value="low">🌱 Prioritas Rendah</option>
+                            </select>
+                        </div>
+
+                        <div class="action-buttons-group">
+                            <button id="import-sample-btn" class="btn-secondary" title="Ambil sampel tugas dari JSONPlaceholder API">
+                                📥 Impor Sampel (API)
+                            </button>
+                            <button id="clear-completed-btn" class="btn-danger-outline" title="Hapus seluruh tugas yang berstatus selesai">
+                                🧹 Bersihkan Selesai
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DAFTAR KARTU TUGAS DINAMIS -->
+                <div id="task-list-container" class="task-list">
+                    <!-- Item tugas akan dirender secara dinamis oleh JavaScript -->
+                </div>
+
+                <!-- EMPTY STATE JIKA TIDAK ADA TUGAS -->
+                <div id="empty-state" class="empty-state" style="display: none;">
+                    <div class="empty-icon">🎉</div>
+                    <h3 class="empty-title">Tidak Ada Tugas Ditemukan</h3>
+                    <p class="empty-desc">Semua tugas beres atau tidak cocok dengan filter pencarian Kalian.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- MODAL EDIT TUGAS -->
+    <div id="edit-task-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">✏️ Edit Tugas Kuliah</h3>
+                <button id="close-modal-btn" class="btn-close-modal" aria-label="Tutup modal">&times;</button>
+            </div>
+            <form id="edit-task-form">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="edit-task-title">Judul Tugas *</label>
+                        <input type="text" id="edit-task-title" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-task-course">Mata Kuliah</label>
+                        <input type="text" id="edit-task-course" class="form-input" list="course-suggestions">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-task-deadline">Tenggat Waktu (Deadline)</label>
+                        <input type="datetime-local" id="edit-task-deadline" class="form-input">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-task-priority">Tingkat Prioritas</label>
+                        <select id="edit-task-priority" class="form-select">
+                            <option value="low">🌱 Rendah (Fleksibel)</option>
+                            <option value="medium">⚡ Sedang (Standar)</option>
+                            <option value="high">🔥 Tinggi (Mendesak)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="edit-task-notes">Catatan Tambahan</label>
+                        <textarea id="edit-task-notes" class="form-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="cancel-modal-btn" class="btn-secondary">Batal</button>
+                    <button type="submit" class="btn-primary" style="width: auto;">Simpan Perubahan</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONTAINER NOTIFIKASI TOAST -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- SCRIPTS ES6+ -->
+    <script src="js/TaskItem.js"></script>
+    <script src="js/DashboardApp.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

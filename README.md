@@ -1,6 +1,6 @@
 # Pemrograman Web - Institut Teknologi Sumatera (ITERA)
 
-tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
+Tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 
 ## Identitas 
 - **Nama** : Andre Prasetya Daely
@@ -15,8 +15,6 @@ tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 | Pertemuan | Direktori Folder | Topik / Deskripsi | Status |
 | :---: | :--- | :--- | :---: |
 | 1 | [`andreprasetyadaely_123140131_pertemuan1/`](./andreprasetyadaely_123140131_pertemuan1/) | Aplikasi Mini POS (Kasir Kantin Kampus) | Selesai |
+| 2 | [`andreprasetyadaely_123140131_pertemuan2/`](./andreprasetyadaely_123140131_pertemuan2/) | ITERA Student Productivity Hub (Personal Dashboard) | Selesai |
 
 ---
-
-
-
