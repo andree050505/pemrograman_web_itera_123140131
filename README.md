@@ -2,7 +2,7 @@
 
 tugas praktikum mata kuliah **Pengembangan Aplikasi Web** / **Pemrograman Web**.
 
-## Identitas Praktikan
+## Identitas 
 - **Nama** : Andre Prasetya Daely
 - **NIM** : 123140131
 - **Program Studi** : Teknik Informatika
